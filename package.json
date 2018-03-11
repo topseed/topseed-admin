@@ -1,0 +1,14 @@
+{
+  "name": "semantic-hello",
+  "version": "1.0.0",
+  "description": "just for gulp",
+  "main": "semantic/gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "Apache",
+  "dependencies": {
+    "semantic-ui": "^2.3.0"
+  }
+}
