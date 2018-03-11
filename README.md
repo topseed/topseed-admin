@@ -5,16 +5,6 @@ Helloworld for Semantic UI
 	npm install -g gulp
 	create folders public/_sui and public/sui
 	npm install semantic-ui --save
-a	check Custom
-	project folder
-	Where put Semantic UI: public/
-	Components: Enter (=all)
-	Set permissions: no
-	RTL: no
-	site folder: _sui/site/
-	packaged version: sui/
-	compressed components: sui/comp/
-	uncompressed components sui/comp/
-	---
-b	Express:
+	choose Express:
 	output to: sui/
+	Then rename src folder to _css, and fix path in semantic.json
