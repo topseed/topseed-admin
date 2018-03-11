@@ -24,26 +24,31 @@ html
 	link(rel='stylesheet', type='text/css', href='/sui/components/icon.css') 
 	style(type='text/css').
 		body {
-		background-color: #FFFFFF;
+			background-color: #FFFFFF;
 		}
+
+		.ui.menu {
+			//background: blue !important;
+		}
+
 		.ui.menu .item img.logo {
 		margin-right: 1.5em;
 		}
 		.main.container {
-		margin-top: 7em;
+			margin-top: 7em;
 		}
 		.wireframe {
-		margin-top: 2em;
+			margin-top: 2em;
 		}
 		.ui.footer.segment {
-		margin: 5em 0em 0em;
-		padding: 5em 0em;
+			margin: 5em 0em 0em;
+			padding: 5em 0em;
 		}
 	body
 		.ui.fixed.inverted.menu
 			.ui.container
 				a.header.item(href='#')
-					img.logo(src='assets/images/logo.png')
+					img.logo(src='/assets/images/logo.svg')
 					| Project Name
 				a.item(href='#') Home
 				.ui.simple.dropdown.item
@@ -103,7 +108,7 @@ html
 						p
 							| Extra space for a call to action inside the footer that could help re-engage users.
 				.ui.inverted.section.divider
-				img.ui.centered.mini.image(src='assets/images/logo.png')
+				img.ui.centered.mini.image(src='assets/images/logo.svg')
 				.ui.horizontal.inverted.small.divided.link.list
 					a.item(href='#') Site Map
 					a.item(href='#') Contact Us
