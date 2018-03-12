@@ -87,7 +87,8 @@
       </div>
     </div>
     <!--container-->
-    <div id="content-wrapper">
+    <!--#content-wrapper-->
+    <div class="pusher">
       <!-- pushed state-->
       <p>Dashboard here</p>
     </div>
@@ -134,12 +135,14 @@
       				TS.signalAppReady()
       				console.log('admin js ready')
       
-      				TT.ScontentID ='#content-wrapper'
+      				TT.ScontentID ='.pusher'
       				TT.handle(function(evt) {
       					console.log(':')
       					if (TT.PRE == evt.typ)  {//start
       						//console.log(evt.$new)
       						//$('#content-wrapper').fadeTo(100,.2)
+      						if ($('.toc.item').is(':visible'))
+      							$('.toc.item').click() //to close sidebar on nav
       					}
       					if (TT.PAGE == evt.typ)  {//new pg loaded
       						$(TT.ScontentID).html(evt.$new)
