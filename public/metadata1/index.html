@@ -71,7 +71,8 @@
     <!--side menu shell-->
     <div class="ui fixed vertical inverted sidebar menu"><a class="active item" href="/home">Dashboard</a><a class="item" href="/metadata1">Metadata1</a><a class="item" href="/metadata2">Metadata2</a><a class="item" href="#">History</a></div>
     <div class="ui fixed inverted menu">
-      <div class="ui container"><a class="toc item"><i class="sidebar icon"></i></a><a class="header item" href="/home"><img class="logo" src="/assets/images/logo.svg">Admin Console</a><a class="item computer_only" href="/home">Dashboard</a><a class="item computer_only" href="/metadata1">Metadata1</a><a class="item computer_only" href="/metadata2">Metadata2</a>
+      <div class="ui container"><a class="toc item"><i class="sidebar icon"></i></a><a class="header item" href="/home"><img class="logo" src="/assets/images/logo.png">&nbsp;
+          Admin Console</a><a class="item computer_only" href="/home">Dashboard</a><a class="item computer_only" href="/metadata1">Metadata1</a><a class="item computer_only" href="/metadata2">Metadata2</a>
         <div class="ui simple dropdown item computer_only">Dropdown <i class="dropdown icon"></i>
           <div class="menu"><a class="item" href="#">Link Item</a><a class="item" href="#">Link Item</a>
             <div class="divider"></div>
@@ -141,8 +142,8 @@
       					if (TT.PRE == evt.typ)  {//start
       						//console.log(evt.$new)
       						//$('#content-wrapper').fadeTo(100,.2)
-      						if ($('.toc.item').is(':visible'))
-      							$('.toc.item').click() //to close sidebar on nav
+      						//on nav, close sidebar if visible
+      						$('.ui.sidebar.visible').sidebar('toggle')
       					}
       					if (TT.PAGE == evt.typ)  {//new pg loaded
       						$(TT.ScontentID).html(evt.$new)

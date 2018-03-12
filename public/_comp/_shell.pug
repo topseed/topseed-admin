@@ -72,8 +72,8 @@ html
 								if (TT.PRE == evt.typ)  {//start
 									//console.log(evt.$new)
 									//$('#content-wrapper').fadeTo(100,.2)
-									if ($('.toc.item').is(':visible'))
-										$('.toc.item').click() //to close sidebar on nav
+									//on nav, close sidebar if visible
+									$('.ui.sidebar.visible').sidebar('toggle')
 								}
 								if (TT.PAGE == evt.typ)  {//new pg loaded
 									$(TT.ScontentID).html(evt.$new)
