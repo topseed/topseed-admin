@@ -1,11 +1,8 @@
 .ui.fixed.vertical.inverted.sidebar.menu
-	a.active.item Home
-	a.item Solution
-	a.item Pricing
-	a.item Learn
-	a.item About
-	a.item Login
-	a.item Signup
+	a.active.item(href='/home') Dashboard
+	a.item(href='/metadata1') Metadata1
+	a.item(href='/metadata2') Metadata2
+	a.item(href='#') History
 
 .ui.fixed.inverted.menu
 	.ui.container
@@ -13,8 +10,10 @@
 			i.sidebar.icon
 		a.header.item(href='/home')
 			img.logo(src='/assets/images/logo.svg')
-			| Project Name
-		a.item.computer_only(href='#') Home
+			| Admin Console
+		a.item.computer_only(href='/home') Dashboard
+		a.item.computer_only(href='/metadata1') Metadata1
+		a.item.computer_only(href='/metadata2') Metadata2
 		.ui.simple.dropdown.item.computer_only
 			| Dropdown 
 			i.dropdown.icon
