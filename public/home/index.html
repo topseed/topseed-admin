@@ -87,22 +87,27 @@
       </div>
     </div>
     <!--container-->
-    <div class="pusher">
+    <div id="content-wrapper">
       <!-- pushed state-->
       <p>Dashboard here</p>
     </div>
-    <script src="/_comp/setup.js"></script>
+    <script>var main_js = '/_comp/setup.js' </script>
+    <script src="//cdn.rawgit.com/topseed/topseed-turbo/master/setup/setup-6.3.js"></script>
     <script>
       console.log('shell')
       
       loadjs.ready('PRELoadB', function() {
       	console.log('loaded setup') // dependencies 
       	loadjs([
-      		//'//cdn.jsdelivr.net/npm/semantic-ui@2.3.0/dist/semantic.css'
+      		'//rawgit.com/topseed/topseed-turbo/master/release/topseed-turbo-latest.js'
+      		,'//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js'
+      		, '//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css'
+      
+      		//,'//cdn.jsdelivr.net/npm/semantic-ui@2.3.0/dist/semantic.css'
       		//,'//cdn.jsdelivr.net/npm/semantic-ui@2.3.0/dist/semantic.js'
-      		//'/sui/semantic.min.css'
+      		//,'/sui/semantic.min.css'
       		//,'/sui/semantic.min.js'
-      		'/sui/components/reset.min.css'
+      		,'/sui/components/reset.min.css'
       		,'/sui/components/site.min.css'
       		,'/sui/components/container.min.css'
       		,'/sui/components/grid.min.css'
@@ -125,6 +130,22 @@
       					document.getElementsByTagName('html')[0].style.visibility = 'visible'
       					console.log('style ready')
       				//}, 10)
+      
+      				TS.signalAppReady()
+      				console.log('admin js ready')
+      
+      				TT.ScontentID ='#content-wrapper'
+      				TT.handle(function(evt) {
+      					console.log(':')
+      					if (TT.PRE == evt.typ)  {//start
+      						//console.log(evt.$new)
+      						//$('#content-wrapper').fadeTo(100,.2)
+      					}
+      					if (TT.PAGE == evt.typ)  {//new pg loaded
+      						$(TT.ScontentID).html(evt.$new)
+      						//$('#content-wrapper').fadeTo(100,1)
+      					}
+      				})
       			}
       		})
       	//js
