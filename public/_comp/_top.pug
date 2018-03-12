@@ -1,0 +1,39 @@
+.ui.fixed.vertical.inverted.sidebar.menu
+	a.active.item Home
+	a.item Solution
+	a.item Pricing
+	a.item Learn
+	a.item About
+	a.item Login
+	a.item Signup
+
+.ui.fixed.inverted.menu
+	.ui.container
+		a.toc.item
+			i.sidebar.icon
+		a.header.item(href='/home')
+			img.logo(src='/assets/images/logo.svg')
+			| Project Name
+		a.item.computer_only(href='#') Home
+		.ui.simple.dropdown.item.computer_only
+			| Dropdown 
+			i.dropdown.icon
+			.menu
+				a.item(href='#') Link Item
+				a.item(href='#') Link Item
+				.divider
+				.header Header Item
+				.item
+					i.dropdown.icon
+					| Sub Menu
+					.menu
+						a.item(href='#') Link Item
+						a.item(href='#') Link Item
+				a.item(href='#') Link Item
+	.right.menu
+		a.item(href='#') Log In
+		.item.last
+			a.ui.inverted.button Register
+
+
+
