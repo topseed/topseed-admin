@@ -3,6 +3,9 @@ Helloworld for Semantic UI
 
 	cd topseed-admin
 	npm install -g gulp
+	npm install
+
+To get to project layout, we did this:
 	npm install semantic-ui --save
 	choose Express:
 	Use public/ instead of semantic/
